@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #020707;
+  overflow: hidden;
+}
+
+/* scroll */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #70677d;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7d30c1;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #583d87;
+}
+
+/* header** */
+
+[aria-label="header"] {
+  width: 100%;
+  height: 100%;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url(imgs/solar-system-animate.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container-header h1 {
+  text-align: center;
+
+  font-weight: 900;
+
+  font-size: 5rem;
+  color: #eee;
+  text-shadow: 0 0 15px #111;
+
+  position: relative;
+}
+
+.container-header h1::after {
+  content: "";
+  width: 200px;
+  height: 8px;
+  background: #7d30c1;
+  display: block;
+
+  border-radius: 16px;
+
+  position: absolute;
+  left: 32.5%;
+  bottom: -100px;
+}
+.container-header p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 200;
+}
+.container-header a#btnDown {
+  margin-top: 4.5rem;
+  display: inline-block;
+  width: 200px;
+}
+
+.container-header img {
+  width: 200px;
+  display: inline-block;
+
+  animation: arrow-down 3s ease-in-out infinite;
+}
+
+@keyframes arrow-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+/* sistema solar */
+
+main {
+  height: 100%;
+  width: 100%;
+  background-image: url(imgs/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  position: relative;
+}
+
+#btnTop {
+  cursor: default;
+  opacity: 0;
+
+  z-index: 10;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+
+  display: inline-block;
+  background: #583d87;
+
+  height: 40px;
+
+  border-radius: 8px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+#btnTop.ativo {
+  opacity: 1;
+
+  z-index: 10;
+  cursor: pointer;
+
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+
+  display: inline-block;
+  background: #583d87;
+
+  height: 40px;
+
+  border-radius: 8px;
+}
+
+#btnTop img {
+  width: 60px;
+  transform: translateY(-9px);
+
+  animation: arrow-up 2s ease-in-out infinite;
+}
+
+@keyframes arrow-up {
+  0% {
+    transform: translateY(-9px);
+  }
+  25% {
+    transform: translateY(-8.5px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+[aria-label="sistema-solar"] div {
+  padding-top: 24rem;
+  padding-bottom: 6rem;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+[aria-label="sistema-solar"] div.sol img {
+  width: 1200px;
+
+  position: absolute;
+  top: -650px;
+  left: 10%;
+}
+
+[aria-label="sistema-solar"] div img {
+  z-index: 2;
+  padding: 1rem;
+  width: 450px;
+}
+
+[aria-label="sistema-solar"] div h1 {
+  opacity: 1;
+
+  z-index: 1;
+
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 1.5px;
+
+  color: #fff;
+
+}
+
+
+[aria-label="sistema-solar"] div p {
+  opacity: 1;
+
+  width: 35%;
+  margin-top: 0.5rem;
+  z-index: 1;
+
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 1.3px;
+
+  color: #999;
+
+}
+
+
+.developed {
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+
+  background: #111;
+}
+
+.developed p {
+  font-size: 1rem;
+  color: #fff;
+}
+.developed a {
+  font-size: 1rem;
+  color: #7d30c1;
+  text-decoration: 2px underline #fff;
+}
+
+
+@media (max-width: 1300px) {
+  [aria-label="header"] {
+    background-image: url(imgs/solar-system-animate.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+}
+
+
+@media (max-width:600px) {
+  .container-header h1::after {
+    display: none;
+  }
+
+  [aria-label="sistema-solar"] div img {
+    width: 250px;
+  }
+
+  [aria-label="sistema-solar"] div h1 {
+    font-size: 2.5rem;
+  }
+  
+  
+  [aria-label="sistema-solar"] div p {
+    width: 50%;
+    font-size: .8rem;
+  }
+
+
+
+}
+
+
+@media (max-width:450px) {
+
+  .container-header a#btnDown {
+    margin-top: 4.5rem;
+    display: inline-block;
+    width: 100px;
+  }
+  
+  .container-header img {
+    width: 100px;
+    display: inline-block;
+  
+    animation: arrow-down 3s ease-in-out infinite;
+  }
+
+  .container-header h1 {
+    font-size: 3.5rem;
+  }
+}
